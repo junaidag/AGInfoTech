@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        10: "10px",
+      },
       backgroundImage: {
         main: "linear-gradient(90deg, #1D89FF 0%, #8EF9F1 100%);",
       },

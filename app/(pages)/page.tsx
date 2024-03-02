@@ -1,13 +1,13 @@
 export default function Home() {
   return (
-    <main className="container mx-auto ">
-      <div className="text-32 lg:text-6xl/normal flex items-center mt-[184px] w-full lg:max-w-[938px] mx-auto flex-wrap justify-center">
+    <main className="container mx-auto">
+      <h1 className="text-32 lg:text-6xl/normal flex items-center mt-[184px] w-full lg:max-w-[938px] mx-auto flex-wrap justify-center">
         <span className="flex-none text-center">
           {"<"}/ Bringing your&nbsp;
         </span>
         <span className="overflow-hidden relative flex-none bg-[url('/visionbg.png')] w-[104px] lg:w-[301px] rounded-[20px] lg:leading-[76px] bg-cover bg-center -scale-x-100 inline-flex justify-center items-center">
           <span className="absolute inset-0 w-full h-full bg-[#0E0E0E99]" />
-          <span className="bg-[linear-gradient(90deg,_#1D89FF_0%,_#8EF9F1_100%)] bg-clip-text text-transparent font-bold -scale-x-100 ">
+          <span className="bg-main bg-clip-text text-transparent font-bold -scale-x-100 ">
             vision
           </span>
         </span>
@@ -16,10 +16,18 @@ export default function Home() {
           <span className="lg:hidden inline"> &nbsp; to</span> its full
           potential {">"}
         </span>
-      </div>
-      <div className="mx-auto max-w-xs ">
+      </h1>
+      <div className="mx-auto max-w-xs flex justify-center text-center flex-col items-center gap-6 mt-12">
         <p>your one stop shop for engineering and dev services.</p>
-        <button className="bg-main">Get a quote</button>
+        <button className="bg-main px-6 py-2.5 rounded-10 text-[#0E0E0E] text-lg font-bold">
+          Get a quote
+        </button>
+      </div>
+      <div className="flex flex-col justify-center items-center mt-24 ">
+        <h3 className="relative bg-main bg-clip-text text-transparent px-9 pb-3 font-bold text-xl/tight">
+          Trusted by
+          <span className="absolute inset-x-0 bottom-0 bg-main h-px rounded-full" />
+        </h3>
       </div>
     </main>
   );

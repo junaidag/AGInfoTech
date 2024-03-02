@@ -1,4 +1,20 @@
+import Image from "next/image";
+
 export default function Home() {
+  const trustedBy = [
+    "ash.svg",
+    "thesun.svg",
+    "purecommerce.svg",
+    "jdvm.svg",
+    "copitch.svg",
+    "randys.svg",
+    "enterhere.svg",
+    "istry.svg",
+    "hrlogics.svg",
+    "accualigners.svg",
+    "s&h.svg",
+    "poulta.png",
+  ];
   return (
     <main className="container mx-auto">
       <h1 className="text-32 lg:text-6xl/normal flex items-center mt-[184px] w-full lg:max-w-[938px] mx-auto flex-wrap justify-center">
@@ -28,6 +44,21 @@ export default function Home() {
           Trusted by
           <span className="absolute inset-x-0 bottom-0 bg-main h-px rounded-full" />
         </h3>
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 items-center gradientborder mt-8 p-6 bg-[#FFFFFF05] w-full">
+          {trustedBy.map((item) => (
+            <div
+              key={item}
+              className="relative h-12 flex items-center justify-center"
+            >
+              <Image
+                className="object-center h-full w-auto "
+                src={`/${item}`}
+                alt={item}
+                layout="fill"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );

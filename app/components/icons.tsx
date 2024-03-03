@@ -159,5 +159,31 @@ const bgblendimage3 = (
     </defs>
   </svg>
 );
-
-export { plusIcon, bgblendimage1, bgblendimage2, bgblendimage3 };
+const scrollDown = (
+  <svg
+    width={20}
+    height={19}
+    viewBox="0 0 20 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.92 16.44C8.3 13.96 5.18 11.12 1.8 9.2C1.46 9.78 0.76 10.68 0.22 11.18C3.78 13.04 7.04 16.34 8.5 18.94H11.1C13.26 15.64 16.54 12.88 19.84 11.44C19.2 10.82 18.66 10 18.2 9.24C14.98 11.02 11.6 13.96 9.92 16.44ZM8.64 12.16H11.2V0.2H8.64V12.16Z"
+      fill="url(#paint0_linear_15_48)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_15_48"
+        x1={0}
+        y1={9}
+        x2={20}
+        y2={9}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#1D89FF" />
+        <stop offset={1} stopColor="#8EF9F1" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export { plusIcon, bgblendimage1, bgblendimage2, bgblendimage3, scrollDown };

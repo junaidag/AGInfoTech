@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { scrollDown } from "../components/icons";
 
 export default function Home(): React.ReactElement {
   const trustedBy = [
@@ -14,6 +15,16 @@ export default function Home(): React.ReactElement {
     "accualigners.svg",
     "s&h.svg",
     "poulta.png",
+  ];
+  const tabs = [
+    "Software development",
+    "UX & UI",
+    "Hybrid Mobile App Development",
+    "Digital Marketing",
+    "AI Development",
+    "SAAS Development",
+    "Digital Transformation",
+    "E-Commerce Development",
   ];
   return (
     <main className="container mx-auto">
@@ -61,6 +72,32 @@ export default function Home(): React.ReactElement {
               />
             </div>
           ))}
+        </div>
+      </div>
+      <div className="flex justify-center w-full mx-auto">
+        <button className="mt-8 group px-2 py-4  gradientborder">
+          <span className="hover:animate-bounce">{scrollDown}</span>
+        </button>
+      </div>
+      <div className="mt-16 ">
+        <div className="container mx-auto border-t border-gray-700 "></div>
+        <div className="pt-[59px] px-40">
+          <div className="flex justify-between items-start">
+            <h3 className="max-w-[437px] w-full font-space-grotesk text-6xl font-normal leading-1.1 tracking-tighter text-left">
+              What can <br /> we do{" "}
+              <span className="bg-main text-transparent bg-clip-text font-space-grotesk text-5xl font-medium leading-1.5 tracking-tighter text-left">
+                for you?
+              </span>
+            </h3>
+            <p className="font-cabinet-grotesk-variable text-base font-normal leading-7 tracking-normal text-left">
+              We create products that achieve your end-goal
+            </p>
+          </div>
+          <div className="flex pt-12 container overflow-x-auto no-scrollbar whitespace-nowrap gap-8 ">
+            {tabs.map((tab) => (
+              <p key={tab}>{tab}</p>
+            ))}
+          </div>
         </div>
       </div>
     </main>

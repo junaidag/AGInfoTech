@@ -1,3 +1,56 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true, // Indicates running in a browser environment
+    "es2021": true // Uses ECMAScript 2021 features
+  },
+  "extends": [
+    "next/core-web-vitals", // Next.js rules for performance and web vitals
+    "eslint:recommended", // Standard ESLint recommended rules
+    "plugin:@typescript-eslint/recommended", // TypeScript-specific rules
+    "plugin:react/recommended", // React-specific rules
+    "plugin:react-hooks/recommended", // Rules for React hooks
+    "next" // Additional rules specific to Next.js
+  ],
+  "parser": "@typescript-eslint/parser", // TypeScript parser for ESLint
+  "parserOptions": {
+    "ecmaVersion": "latest", // Latest ECMAScript standard
+    "sourceType": "module", // Uses ES6 modules
+    "ecmaFeatures": {
+      "jsx": true
+    } // Enables linting for JSX
+  },
+  "plugins": [
+    "@typescript-eslint", // TypeScript plugin
+    "react", // React plugin
+    "unused-imports", // Detects unused imports
+    "react-hooks" // Linting for React hooks
+  ],
+  "rules": {
+    "quotes": ["error", "double"], // Requires double quotes
+    "eqeqeq": ["warn", "always"], // Enforces strict equality
+    "unused-imports/no-unused-imports": "error", // Detects unused imports
+    "no-mixed-spaces-and-tabs": "off", // Disables the rule against mixing spaces and tabs
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ], // Limits console usage to warn and error
+    "no-debugger": "warn", // Warns against using the debugger
+    "no-unused-expressions": "warn", // Warns about unused expressions
+    "no-unused-vars": "warn", // Warns about unused variables
+    "no-duplicate-case": "error", // Disallows duplicate case labels
+    "no-func-assign": "error", // Prevents reassigning function declarations
+    "react/react-in-jsx-scope": "off", // Not needed in modern React
+    "react/prop-types": "off", // Disables prop-types rule in React
+    "react/button-has-type": "warn", // Ensures button elements have a type
+    "react/jsx-key": "warn", // Ensures list elements have a unique 'key' prop
+    "react-hooks/rules-of-hooks": "error", // Enforces the rules of hooks
+    "react-hooks/exhaustive-deps": "warn", // Warns about missing dependencies in hooks
+    "@typescript-eslint/no-unused-vars": "off", // Warns about unused TypeScript variables
+    "@typescript-eslint/no-explicit-any": "off", // Allows 'any' type in TypeScript
+    "@typescript-eslint/explicit-function-return-type": "warn", // Encourages explicit return types for functions
+    "@typescript-eslint/explicit-module-boundary-types": "warn", // Encourages explicit return types for exported functions
+    "@typescript-eslint/no-non-null-assertion": "warn" // Warns about non-null assertions in TypeScript
+  }
 }

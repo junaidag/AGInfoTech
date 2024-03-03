@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   const trustedBy = [
     "ash.svg",
     "thesun.svg",
@@ -35,7 +35,10 @@ export default function Home() {
       </h1>
       <div className="mx-auto max-w-xs flex justify-center text-center flex-col items-center gap-6 mt-12">
         <p>your one stop shop for engineering and dev services.</p>
-        <button className="bg-main px-6 py-2.5 rounded-10 text-[#0E0E0E] text-lg font-bold">
+        <button
+          type="button"
+          className="bg-main px-6 py-2.5 rounded-10 text-[#0E0E0E] text-lg font-bold"
+        >
           Get a quote
         </button>
       </div>

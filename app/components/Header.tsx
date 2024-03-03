@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { bgblendimage1, bgblendimage2, bgblendimage3, plusIcon } from "./icons";
 
-export default function Header() {
+export default function Header(): React.ReactElement {
   return (
     <>
       <header className="container mx-auto flex justify-between py-6 items-center">
@@ -12,7 +12,10 @@ export default function Header() {
         <Link href="/" className="font-medium text-xl/tight tracking-wide">
           Home
         </Link>
-        <button className="rounded-full border border-white w-[34px] h-[34px] flex items-center justify-center ">
+        <button
+          type="button"
+          className="rounded-full border border-white w-[34px] h-[34px] flex items-center justify-center "
+        >
           {plusIcon}
         </button>
       </header>

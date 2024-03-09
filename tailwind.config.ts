@@ -13,6 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         main: "linear-gradient(90deg, #1D89FF 0%, #8EF9F1 100%);",
+        mainReverse: "linear-gradient(90deg, #8EF9F1 0%, #1D89FF 100%);",
       },
       fontSize: {
         32: "32px",

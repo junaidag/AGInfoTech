@@ -37,9 +37,15 @@ body {
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb::before {
+  opacity: 0;
   background: linear-gradient(90deg, #8ef9f1 0%, #1d89ff 100%);
 }
+::-webkit-scrollbar-thumb::before:hover {
+  opacity: 1;
+  background: linear-gradient(90deg, #8ef9f1 0%, #1d89ff 100%);
+}
+
 .gradientborder:before {
   content: "";
   position: absolute;
@@ -61,4 +67,44 @@ body {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+/* main: "linear-gradient(90deg, #1D89FF 0%, #8EF9F1 100%);",
+mainReverse: "linear-gradient(90deg, #8EF9F1 0%, #1D89FF 100%);", */
+.bg-main-text {
+  position: relative;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #1d89ff 0%, #8ef9f1 100%);
+}
+
+.bg-main-text::before {
+  position: absolute;
+  content: "";
+  color: transparent;
+  inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+  background-clip: text;
+  background-image: linear-gradient(90deg, #8ef9f1 0%, #1d89ff 100%);
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.bg-main-text:hover::before {
+  opacity: 1;
+}
+.bg-main-btn {
+  position: relative;
+  background: linear-gradient(90deg, #1d89ff 0%, #8ef9f1 100%);
+}
+
+.bg-main-btn::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: linear-gradient(90deg, #8ef9f1 0%, #1d89ff 100%);
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.bg-main-btn:hover::before {
+  opacity: 1;
 }

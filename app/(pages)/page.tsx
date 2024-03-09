@@ -86,7 +86,7 @@ export default function Home(): React.ReactElement {
         </Suspense>
       </div>
       <div className="flex justify-center w-full mx-auto">
-        <button className="mt-8 group px-2 py-4  gradientborder">
+        <button type="button" className="mt-8 group px-2 py-4  gradientborder">
           <span className="group-hover:-mt-2">{scrollDown}</span>
         </button>
       </div>

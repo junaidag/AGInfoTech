@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { bgblendimage1, bgblendimage2, bgblendimage3, plusIcon } from "./icons";
+import {
+  bgblendimage1,
+  bgblendimage2,
+  bgblendimage3,
+  bgblendimage4,
+  plusIcon,
+} from "./icons";
 
 export default function Header(): React.ReactElement {
   return (
@@ -22,6 +28,9 @@ export default function Header(): React.ReactElement {
       <span className="absolute left-0 top-0 -z-10">{bgblendimage1}</span>
       <span className="absolute right-0 top-0 -z-10">{bgblendimage2}</span>
       <span className="absolute left-0 top-[500px] -z-10">{bgblendimage3}</span>
+      <span className="absolute left-0 top-[2304px] -z-10">
+        {bgblendimage4}
+      </span>
     </>
   );
 }

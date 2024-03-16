@@ -159,6 +159,66 @@ const bgblendimage3 = (
     </defs>
   </svg>
 );
+const bgblendimage4 = (
+  <svg
+    width={649}
+    height={1121}
+    viewBox="0 0 649 1121"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_f_15_23)">
+      <circle cx={59} cy={648} r={123} fill="#1D89FF" />
+    </g>
+    <g filter="url(#filter1_f_15_23)">
+      <circle cx={176} cy={473} r={123} fill="#8EF9F1" />
+    </g>
+    <defs>
+      <filter
+        id="filter0_f_15_23"
+        x={-414}
+        y={175}
+        width={946}
+        height={946}
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity={0} result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation={175}
+          result="effect1_foregroundBlur_15_23"
+        />
+      </filter>
+      <filter
+        id="filter1_f_15_23"
+        x={-297}
+        y={0}
+        width={946}
+        height={946}
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity={0} result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation={175}
+          result="effect1_foregroundBlur_15_23"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
 const scrollDown = (
   <svg
     width={20}
@@ -186,4 +246,11 @@ const scrollDown = (
     </defs>
   </svg>
 );
-export { plusIcon, bgblendimage1, bgblendimage2, bgblendimage3, scrollDown };
+export {
+  plusIcon,
+  bgblendimage1,
+  bgblendimage2,
+  bgblendimage3,
+  bgblendimage4,
+  scrollDown,
+};

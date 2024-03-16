@@ -20,19 +20,19 @@ const trustedBy = [
 export default function Cards(): React.ReactElement {
   const cardsRef = useRef<Array<any>>([]);
   useEffect(() => {
-    if (cardsRef.current) {
-      const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+    if (cardsRef.current && typeof window !== "undefined") {
+      const tl = gsap.timeline({ defaults: { ease: "power2.in" } });
       tl.from(cardsRef.current, {
         duration: 1,
         scale: 0,
         opacity: 0,
-        // rotation: 360,
+        rotation: 360,
         stagger: 0.1,
       }).to(cardsRef.current, {
         duration: 1,
         scale: 1,
         opacity: 1,
-        // rotation: 0,
+        rotation: 0,
         stagger: 0.1,
       });
     }

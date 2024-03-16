@@ -1,50 +1,11 @@
 import { Suspense } from "react";
 import { scrollDown } from "../components/icons";
 import dynamic from "next/dynamic";
+import Tabs from "../components/Tabs";
+import OurWork from "../components/OurWork";
 const Cards = dynamic(() => import("./Cards"), { ssr: false });
+
 export default function Home(): React.ReactElement {
-  const tabs = [
-    "Software development",
-    "UX & UI",
-    "Hybrid Mobile App Development",
-    "Digital Marketing",
-    "AI Development",
-    "SAAS Development",
-    "Digital Transformation",
-    "E-Commerce Development",
-  ];
-  const cards = [
-    {
-      heading: "Discovery + research",
-      time: "1-2 hours",
-      para: "Understanding your branding requirements",
-      para1:
-        "Discovery and research are vital in the brand identity process as they provide valuable insights into market dynamics, target audience preferences, and competitor analysis, enabling the development of a strategic and differentiated brand identity.",
-    },
-    {
-      heading: "Visual direction",
-      time: "3-4 hours",
-      para: "What to aim for",
-      para1:
-        "Creative direction and mood boards are crucial as they provide a visual representation of the desired aesthetic. They ensure stakeholder alignment, foster collaboration, and guide the development of a cohesive and impactful brand identity.",
-    },
-  ];
-  const cards1 = [
-    {
-      heading: "Project Name",
-      time: "1-2 hours",
-      para: "Understanding your branding requirements",
-      para1:
-        "Discovery and research are vital in the brand identity process as they provide valuable insights into market dynamics, target audience preferences, and competitor analysis, enabling the development of a strategic and differentiated brand identity.",
-    },
-    {
-      heading: "Visual direction",
-      time: "3-4 hours",
-      para: "What to aim for",
-      para1:
-        "Creative direction and mood boards are crucial as they provide a visual representation of the desired aesthetic. They ensure stakeholder alignment, foster collaboration, and guide the development of a cohesive and impactful brand identity.",
-    },
-  ];
   return (
     <main className="container mx-auto">
       <h1 className="text-32 lg:text-6xl/normal flex items-center mt-[184px] w-full lg:max-w-[938px] mx-auto flex-wrap justify-center">
@@ -92,11 +53,11 @@ export default function Home(): React.ReactElement {
       </div>
       <div className="mt-16 ">
         <div className="container mx-auto border-t border-gray-700 "></div>
-        <div className="pt-[59px] px-40">
+        <div className="pt-[59px]">
           <div className="flex justify-between items-center">
-            <h3 className="max-w-[437px] w-full font-space-grotesk text-6xl font-normal leading-1.1 tracking-tighter text-left">
+            <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
               What can <br /> we do{" "}
-              <span className="bg-main text-transparent bg-clip-text font-space-grotesk text-5xl font-medium leading-1.5 tracking-tighter text-left">
+              <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
                 for you?
               </span>
             </h3>
@@ -104,75 +65,24 @@ export default function Home(): React.ReactElement {
               We create products that achieve your end-goal
             </p>
           </div>
-          <div className="flex pt-12 container overflow-x-auto no-scrollbar whitespace-nowrap gap-8 ">
-            {tabs.map((tab) => (
-              <p key={tab}>{tab}</p>
-            ))}
-          </div>
-          <div className="pt-12 gap-8 flex">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="max-w-[858px] w-full border rounded-[32px]	py-20 px-12"
-              >
-                <div className="flex justify-between items-center">
-                  <h1 className="font-space-grotesk text-lg font-normal leading-10 tracking-normal text-left">
-                    {card.heading}
-                  </h1>
-                  <p className="py-[10px] px-4 rounded-2xl border border-gray-300">
-                    {card.time}
-                  </p>
-                </div>
-                <div className="pt-10 gap-4 max-w-[762px] w-full">
-                  <p className="font-cabinet-grotesk-variable text-base font-bold leading-7 tracking-tighter">
-                    {card.para}
-                  </p>
-                  <p className="font-cabinet-grotesk-variable text-base font-normal leading-9 tracking-tighter">
-                    {card.para1}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Tabs />
         </div>
       </div>
       <div className="mt-24 gap-12 ">
         <div className="container mx-auto border-t border-gray-700 "></div>
         <div className="flex justify-between items-center pt-12 px-40">
-          <h3 className="max-w-[437px] w-full font-space-grotesk text-6xl font-normal leading-1.1 tracking-tighter text-left">
+          <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
             Take a look <br /> at{" "}
-            <span className="bg-main text-transparent bg-clip-text font-space-grotesk text-5xl font-medium leading-1.5 tracking-tighter text-left">
+            <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
               our work
             </span>
           </h3>
           <p className="font-cabinet-grotesk-variable text-base font-normal leading-7 tracking-normal text-left">
-            We create products that achieve your end-goal
+            Started from an idea, now we are here!
           </p>
         </div>
         <div className="pt-12 gap-8 flex">
-          {cards1.map((card, index) => (
-            <div
-              key={index}
-              className="max-w-[858px] w-full border rounded-[32px]	py-20 px-12"
-            >
-              <div className="flex justify-between items-center">
-                <h1 className="font-space-grotesk text-lg font-normal leading-10 tracking-normal text-left">
-                  {card.heading}
-                </h1>
-                <p className="py-[10px] px-4 rounded-2xl border border-gray-300">
-                  {card.time}
-                </p>
-              </div>
-              <div className="pt-10 gap-4 max-w-[762px] w-full">
-                <p className="font-cabinet-grotesk-variable text-base font-bold leading-7 tracking-tighter">
-                  {card.para}
-                </p>
-                <p className="font-cabinet-grotesk-variable text-base font-normal leading-9 tracking-tighter">
-                  {card.para1}
-                </p>
-              </div>
-            </div>
-          ))}
+          <OurWork />
         </div>
       </div>
     </main>

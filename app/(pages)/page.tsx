@@ -3,6 +3,8 @@ import { scrollDown } from "../components/icons";
 import dynamic from "next/dynamic";
 import Tabs from "../components/Tabs";
 import OurWork from "../components/OurWork";
+import OurFlow from "../components/OurFlow";
+import WhyChooseUs from "../components/WhyChooseUs";
 const Cards = dynamic(() => import("./Cards"), { ssr: false });
 
 export default function Home(): React.ReactElement {
@@ -43,7 +45,9 @@ export default function Home(): React.ReactElement {
             <div className="container mx-auto w-full h-[176px] bg-slate-400 animate-pulse" />
           }
         >
-          <Cards />
+          <div className="gradientborder w-full mt-8 p-6 bg-[#FFFFFF05] h-[176px]">
+            <Cards />
+          </div>
         </Suspense>
       </div>
       <div className="flex justify-center w-full mx-auto">
@@ -51,38 +55,72 @@ export default function Home(): React.ReactElement {
           <span className="group-hover:-mt-2">{scrollDown}</span>
         </button>
       </div>
-      <div className="mt-16 ">
-        <div className="container mx-auto border-t border-gray-700 "></div>
-        <div className="pt-[59px]">
-          <div className="flex justify-between items-center">
-            <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
-              What can <br /> we do{" "}
-              <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
-                for you?
-              </span>
-            </h3>
-            <p className="font-cabinet-grotesk-variable text-base font-normal leading-7 tracking-normal text-left">
-              We create products that achieve your end-goal
-            </p>
-          </div>
-          <Tabs />
+      <div className="container mx-auto border-t border-gray-700 mt-16" />
+
+      <div className="pt-[59px]">
+        <div className="flex justify-between items-center">
+          <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
+            What can <br /> we do{" "}
+            <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
+              for you?
+            </span>
+          </h3>
+          <p className=" font-normal leading-7 tracking-normal text-left">
+            We create products that achieve your end-goal
+          </p>
         </div>
+        <Tabs />
       </div>
-      <div className="mt-24 gap-12 ">
-        <div className="container mx-auto border-t border-gray-700 "></div>
-        <div className="flex justify-between items-center pt-12 px-40">
+      <div className="container mx-auto border-t border-gray-700 mt-24" />
+      <div className="gap-12 flex flex-col">
+        <div className="flex justify-between items-center pt-12">
           <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
             Take a look <br /> at{" "}
             <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
               our work
             </span>
           </h3>
-          <p className="font-cabinet-grotesk-variable text-base font-normal leading-7 tracking-normal text-left">
+          <p className=" font-normal leading-7 tracking-normal text-left">
             Started from an idea, now we are here!
           </p>
         </div>
-        <div className="pt-12 gap-8 flex">
+        <div>
           <OurWork />
+        </div>
+      </div>
+      <div className="container mx-auto border-t border-gray-700 mt-24" />
+      <div className="gap-12 flex flex-col">
+        <div className="flex justify-between items-center pt-12">
+          <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
+            This is how <br /> we{" "}
+            <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
+              flow
+            </span>
+          </h3>
+          <p className=" font-normal leading-7 tracking-normal text-left">
+            Take a look at our workflow
+          </p>
+        </div>
+        <div>
+          <OurFlow />
+        </div>
+      </div>
+      <div className="container mx-auto border-t border-gray-700 mt-24" />
+      <div className="gap-12 flex flex-col">
+        <div className="flex justify-between items-center pt-12">
+          <h3 className="max-w-[437px] w-full  text-6xl font-normal leading-1.1 tracking-tighter text-left">
+            Why <br />
+            Choose{" "}
+            <span className="bg-main text-transparent bg-clip-text  text-5xl font-medium leading-1.5 tracking-tighter text-left">
+              Us
+            </span>
+          </h3>
+          <p className=" font-normal leading-7 tracking-normal text-left">
+            From ideation to delivery, and ongoing support,
+          </p>
+        </div>
+        <div>
+          <WhyChooseUs />
         </div>
       </div>
     </main>

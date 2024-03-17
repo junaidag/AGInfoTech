@@ -117,3 +117,17 @@ mainReverse: "linear-gradient(90deg, #8EF9F1 0%, #1D89FF 100%);", */
 .bg-main-btn:hover::before {
   opacity: 1;
 }
+.scaleAnimation {
+  opacity: 0;
+  animation: scaleAndFade 1s forwards;
+}
+@keyframes scaleAndFade {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

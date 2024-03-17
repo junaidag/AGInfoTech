@@ -77,10 +77,10 @@ export default function Tabs() {
                   </p>
                 </div>
                 <div className="pt-10 gap-4 w-full max-w-[762px]">
-                  <p className="font-cabinet-grotesk-variable text-base font-bold leading-7 tracking-tighter">
+                  <p className=" font-bold leading-7 tracking-tighter">
                     {item.para}
                   </p>
-                  <p className="font-cabinet-grotesk-variable text-base font-normal leading-9 tracking-tighter">
+                  <p className=" font-normal leading-9 tracking-tighter">
                     {item.para1}
                   </p>
                 </div>

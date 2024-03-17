@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function OurFlow() {
+export default function OurFlow(): React.ReactElement {
   const steps = [
     { id: "01", name: "Ideation & Evaluation", image: "/idea.gif" },
     { id: "02", name: "Product Design", image: "/penadjust.gif" },

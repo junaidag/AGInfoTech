@@ -7,13 +7,12 @@ import {
   fingerprint,
   lifebuoy,
   sheildCheck,
-  topLeftIcon,
   trophy,
   userGroup,
   wrench,
 } from "./icons";
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs(): React.ReactElement {
   const cards = [
     { name: "Scale with the right technology", icon: cpuchip },
     { name: "Software project rescue", icon: lifebuoy },

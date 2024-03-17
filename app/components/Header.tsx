@@ -7,7 +7,6 @@ import {
   bgblendimage4,
   bgblendimage5,
   bgblendimage6,
-  bgblendimage7,
   bgblendimage8,
   plusIcon,
 } from "./icons";

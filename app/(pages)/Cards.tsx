@@ -21,10 +21,10 @@ export default function Cards(): React.ReactElement {
   const cardsRef = useRef<Array<any>>([]);
   useEffect(() => {
     if (cardsRef.current && typeof window !== "undefined") {
-      const animateImages = () => {
+      const animateImages = (): void => {
         const tl = gsap.timeline({ defaults: { ease: "power2.in" } });
 
-        cardsRef.current.forEach((image, i) => {
+        cardsRef.current.forEach((image) => {
           const direction = Math.floor(Math.random() * 4); // 0 for left, 1 for right, 2 for top, 3 for bottom
           let startX = 0,
             startY = 0,
@@ -108,7 +108,7 @@ export default function Cards(): React.ReactElement {
           className="relative flex items-center last:w-full justify-center"
         >
           <Image
-            className={`object-center w-auto`}
+            className={"object-center w-auto"}
             src={`/${item}`}
             alt={item}
             width={0}

@@ -6,7 +6,7 @@ const SwiperComponent = dynamic(() => import("./SwiperComponent"), {
   ssr: false,
 });
 
-export default function Tabs() {
+export default function Tabs(): React.ReactElement {
   const tabs = [
     "Software development",
     "UX & UI",

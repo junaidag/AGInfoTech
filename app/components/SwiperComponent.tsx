@@ -41,9 +41,11 @@ export default function SwiperComponent({
     },
   },
   Slide,
-}: mergedType) {
+  ...props
+}: mergedType): React.ReactElement {
   return (
     <Swiper
+      {...props}
       key={`swiper${name}`}
       navigation={{
         prevEl: `.prev-button${name}`,

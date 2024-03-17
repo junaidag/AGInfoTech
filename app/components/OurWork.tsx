@@ -20,7 +20,7 @@ const cards = [
     image: "/projectName.png",
   },
 ];
-export default function OurWork() {
+export default function OurWork(): React.ReactElement {
   return (
     <Suspense>
       <SwiperComponent
